@@ -20,8 +20,8 @@ echo
 echo 'Backing up...'
 echo
 
-cp --parents -v /root/app/contact.php $BACKUP_DIR
-cp --parents -v /root/app/index.php $BACKUP_DIR
+cp --preserve=mode,ownership --parents -v /root/app/contact.php $BACKUP_DIR
+cp --preserve=mode,ownership --parents -v /root/app/index.php $BACKUP_DIR
 
 echo
 echo 'Compressing...'
