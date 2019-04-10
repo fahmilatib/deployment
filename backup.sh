@@ -24,7 +24,7 @@ cp --preserve=mode,ownership --parents -v /root/app/contact.php $BACKUP_DIR
 cp --preserve=mode,ownership --parents -v /root/app/index.php $BACKUP_DIR
 
 echo
-echo 'Compressing...'
+echo 'Zipping...'
 echo
 
 tar -C $BASE_BACKUP_DIR -czvf $BACKUP_DIR.tar.gz $DEPLOYMENT_ID

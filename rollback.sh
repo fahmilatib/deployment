@@ -11,7 +11,7 @@ if [ ! -f $BACKUP_DIR.tar.gz ]; then
 fi
 
 echo
-echo 'Decompressing...'
+echo 'Unzipping...'
 echo
 
 tar -C $BASE_BACKUP_DIR -xvf $BACKUP_DIR.tar.gz
