@@ -3,6 +3,7 @@
 FILE_PERMISSIONS=666
 DIR_PERMISSIONS=777
 DEPLOYMENT_ID=foobar
+BUCKET_DIR=./files
 BASE_BACKUP_DIR=/root/backup
 BACKUP_DIR=$BASE_BACKUP_DIR/$DEPLOYMENT_ID
 
@@ -22,7 +23,7 @@ rm -f /root/app/contact.php
 
 # files to be added (existing directories)
 
-cp -v ./files/about.php /root/app/about.php
+cp -v $BUCKET_DIR/about.php /root/app/about.php
 
 # files to be added (new directories)
 
@@ -36,11 +37,11 @@ if [ ! -d /root/app/controllers/admin ]; then
     chmod $DIR_PERMISSIONS /root/app/controllers/admin
 fi
 
-cp -v ./files/Home.php /root/app/controllers/admin/Home.php
+cp -v $BUCKET_DIR/Home.php /root/app/controllers/admin/Home.php
 
 # files to be updated
 
-cp -v ./files/index.php /root/app/index.php
+cp -v $BUCKET_DIR/index.php /root/app/index.php
 
 echo
 echo 'Updating file permissions...'
